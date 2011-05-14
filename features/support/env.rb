@@ -8,14 +8,14 @@ require 'capybara'
 require 'capybara/cucumber'
 require 'rspec'
 
-Capybara.app = sinatra-config
+Capybara.app = SinatraConfig
 
-class sinatra-configWorld
+class SinatraConfigWorld
   include Capybara
   include RSpec::Expectations
   include RSpec::Matchers
 end
 
 World do
-  sinatra-configWorld.new
+  SinatraConfigWorld.new
 end
