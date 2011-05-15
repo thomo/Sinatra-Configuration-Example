@@ -1,5 +1,4 @@
 require 'ostruct'
-require 'couchrest'
 
 SinatraConfig::configure do
 	SiteConfig = OpenStruct.new(
@@ -9,8 +8,6 @@ SinatraConfig::configure do
 		:couchdb_url => 'http://127.0.0.1:5984',
 		:couchdb_name => 'sinatraconfig'
 	)
-	
-#	CouchDb = CouchRest.database("http://127.0.0.1:5984/sinatraconfig-test")
 end
 
 SinatraConfig::configure :development do
