@@ -22,4 +22,10 @@ describe 'SinatraConfig' do
     SiteConfig.author.should == "Example Author"
     SiteConfig.env_specific.should == "test value"
   end
+  
+  it 'should configure the couchdb url' do
+    SinatraConfig::CouchDb.host.should == "http://127.0.0.1:5984"
+    SinatraConfig::CouchDb.name.should == "sinatraconfig-test"
+    "#{SinatraConfig::CouchDb}" == "http://127.0.0.1:5984/sinatraconfig-test"
+  end
 end
