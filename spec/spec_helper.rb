@@ -1,6 +1,5 @@
 require 'rubygems'
-require 'rack/test'
-require 'rspec'
+require "bundler/setup"
 
 ENV['RACK_ENV'] = 'test'
 
